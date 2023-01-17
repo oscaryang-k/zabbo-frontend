@@ -1,11 +1,6 @@
 import React from "react";
-import {
-  MainLogo,
-  DashBoardSVG,
-  SettingsSVG,
-  ContractsSVG,
-  ContactsSVG,
-} from "../assets/icons";
+import { NavLink } from "react-router-dom";
+import { MainLogo, IconDashboard, IconContracts, IconContacts, IconSettings } from "../assets/icons";
 
 function Sidebar() {
   return (
@@ -13,22 +8,23 @@ function Sidebar() {
       <div className="main-logo">
         <MainLogo />
       </div>
-      <div className="sidebar-nav sidebar-nav-dashboard">
-        <DashBoardSVG />
-        <div className="sidebar-nav-title ">Dashboard</div>
-        {/* <div>Dashboard</div> */}
-      </div>
-      <div className="sidebar-nav sidebar-nav-contracts">
-        <ContractsSVG />
-        <div className="sidebar-nav-title">Contracts</div>
-      </div>
-      <div className="sidebar-nav sidebar-nav-contacts">
-        <ContactsSVG />
-        <div className="sidebar-nav-title">Contacts</div>
-      </div>
-      <div className="sidebar-nav sidebar-nav-settings">
-        <SettingsSVG />
-        <div className="sidebar-nav-title">Settings</div>
+      <div className="sidebar-navigation">
+        <NavLink className="sidebar-nav-link" to="/">
+          <IconDashboard></IconDashboard>
+          <span>Dashboard</span>
+        </NavLink>
+        <NavLink className="sidebar-nav-link" to="/contracts">
+          <IconContracts></IconContracts>
+          <span>Contracts</span>
+        </NavLink>
+        <NavLink className="sidebar-nav-link" to="/contacts">
+          <IconContacts></IconContacts>
+          <span>Contacts</span>
+        </NavLink>
+        <NavLink className="sidebar-nav-link" to="/settings">
+          <IconSettings></IconSettings>
+          <span>Settings</span>
+        </NavLink>
       </div>
     </div>
   );
