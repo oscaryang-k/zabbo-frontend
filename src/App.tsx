@@ -1,11 +1,13 @@
 import React from "react";
-import "./App.css";
+import "./styles/index.scss";
+import { BrowserRouter } from "react-router-dom";
+import MainRoutes from "./components/Routes";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <BrowserRouter>
+      <MainRoutes></MainRoutes>
+    </BrowserRouter>
   );
 }
 
