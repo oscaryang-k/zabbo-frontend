@@ -5,21 +5,13 @@
   overflow-y: auto;
 }
 
-.main-content-wrapper {
-  padding: 90px 0px 0px;
-
-  > nav.course-breadcrumb {
-    padding: 1.5rem 3rem 0;
-  }
-}
-
 .page-content-wrapper {
-  min-height: 900px;
   flex: 1 1 0%;
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   background-color: #fbfbfb;
   position: relative;
   top: 0;
+  overflow-y: auto;
 }
 
 .page-content {
