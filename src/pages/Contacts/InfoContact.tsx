@@ -12,20 +12,27 @@ import {
   IconTwitter,
   IconUserAvatar,
 } from "../../assets/icons";
-// import { HeaderButton } from "../../components/buttons";
+
+import ConfirmDialog from "../../components/common/ConfirmDialog";
 import TransactionItem from "../../components/common/TransactionItem";
 
-import "./contact.scss";
+import "./contacts.scss";
 
 const InfoContact = () => {
+  const [displayConfirm, setDisplayConfirm] = React.useState(false);
+
+  const onOk = () => {};
   return (
     <div className="page-content-wrapper">
       <div className="grid grid-cols-12 gap-2 mr-20 ml-20">
         <div className="col-span-10 flex flex-col ml-3 mr-3">
-          <div className="flex  pt-12  justify-between">
-            <NavLink to="/contacts">
-              <IconArrowLeft></IconArrowLeft>
-            </NavLink>
+          <div className="flex  pt-12  justify-between ">
+            <div className="">
+              <NavLink to="/contacts">
+                <IconArrowLeft></IconArrowLeft>
+              </NavLink>
+            </div>
+
             <div
               className="hover:cursor-pointer dropdownMenu"
               style={{ position: "relative" }}
@@ -50,10 +57,13 @@ const InfoContact = () => {
                   <IconShortLine></IconShortLine>
                 </li>
                 <li>
-                  <div className=" text-sm p-3">
-                    <NavLink to={""} style={{ color: "#312F2F" }}>
-                      Delete
-                    </NavLink>
+                  <div
+                    className=" text-sm p-3 hover:cursor-pointer"
+                    onClick={(e) => {
+                      setDisplayConfirm(true);
+                    }}
+                  >
+                    <div style={{ color: "#312F2F" }}>Delete</div>
                   </div>{" "}
                   <IconShortLine></IconShortLine>
                 </li>
@@ -219,6 +229,14 @@ const InfoContact = () => {
           </div>
         </div>
       </div>
+      <ConfirmDialog
+        title="Delete Contact"
+        display={displayConfirm}
+        content="are you sure want to delete this contact?"
+        exit={false}
+        onOk={onOk}
+        onCancel={() => setDisplayConfirm(false)}
+      />
     </div>
   );
 };

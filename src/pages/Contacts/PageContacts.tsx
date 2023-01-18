@@ -28,9 +28,36 @@ function PageContacts() {
         >
           <div className="grid grid-cols-12 gap-2 ">
             <div className="col-span-11">
+              <UserItem
+                userNickname="John Doe"
+                avatarUrl=""
+                price="1890"
+                date={Date.now()}
+                content="JhonDoe"
+              ></UserItem>
               <UserItem></UserItem>
               <UserItem></UserItem>
-              <UserItem></UserItem>
+              <UserItem
+                userNickname="John Doe"
+                avatarUrl=""
+                price="1890"
+                date={Date.now()}
+                content="JhonDoe"
+              ></UserItem>
+              <UserItem
+                userNickname="John Doe"
+                avatarUrl=""
+                price="1890"
+                date={Date.now()}
+                content="JhonDoe"
+              ></UserItem>
+              <UserItem
+                userNickname="John Doe"
+                avatarUrl=""
+                price="1890"
+                date={Date.now()}
+                content="JhonDoe"
+              ></UserItem>
             </div>
             <div className="col-span-1 flex flex-end">
               <AlphabetList
