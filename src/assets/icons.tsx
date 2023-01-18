@@ -23,11 +23,13 @@ import { ReactComponent as IconTelegram } from "./icons/telegram.svg";
 import { ReactComponent as IconTwitter } from "./icons/twitter.svg";
 import { ReactComponent as IconLine } from "./icons/line.svg";
 import { ReactComponent as IconShortLine } from "./icons/shortline.svg";
+import { ReactComponent as IconArrowForward } from "./icons/arrowForward.svg";
 export {
   IconLogo,
   MainLogo,
   IconArrowRight,
   IconArrowLeft,
+  IconArrowForward,
   IconAlarm,
   IconContacts,
   IconClose,

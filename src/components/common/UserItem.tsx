@@ -5,7 +5,7 @@ export interface propsType {
   userNickname: string;
   avatarUrl: string;
   price: string;
-  date: string;
+  date: string | number;
   content: string;
   //   action: () => Function;
 }
