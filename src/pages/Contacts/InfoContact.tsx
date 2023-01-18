@@ -4,10 +4,8 @@ import {
   IconArrowLeft,
   IconArrowRight,
   IconInstagram,
-  IconLine,
   IconLinkedin,
   IconSeeMore,
-  IconShortLine,
   IconTelegram,
   IconTwitter,
   IconUserAvatar,
@@ -24,8 +22,8 @@ const InfoContact = () => {
   const onOk = () => {};
   return (
     <div className="page-content-wrapper">
-      <div className="grid grid-cols-12 gap-2 mr-20 ml-20">
-        <div className="col-span-10 flex flex-col ml-3 mr-3">
+      <div className=" mr-20 ml-20">
+        <div className="w-[800px] flex flex-col ml-3 mr-3">
           <div className="flex  pt-12  justify-between ">
             <div className="">
               <NavLink to="/contacts">
@@ -45,7 +43,7 @@ const InfoContact = () => {
                       New engagement
                     </NavLink>
                   </div>
-                  <IconShortLine></IconShortLine>
+                  <hr />
                 </li>
 
                 <li>
@@ -53,8 +51,8 @@ const InfoContact = () => {
                     <NavLink to={""} style={{ color: "#312F2F" }}>
                       Edit
                     </NavLink>
-                  </div>{" "}
-                  <IconShortLine></IconShortLine>
+                  </div>
+                  <hr />
                 </li>
                 <li>
                   <div
@@ -65,7 +63,7 @@ const InfoContact = () => {
                   >
                     <div style={{ color: "#312F2F" }}>Delete</div>
                   </div>{" "}
-                  <IconShortLine></IconShortLine>
+                  <hr />
                 </li>
                 <li>
                   <div className=" text-sm p-3">
@@ -109,13 +107,13 @@ const InfoContact = () => {
               <IconLinkedin></IconLinkedin>
             </NavLink>
           </div>
-          <div className="col-span-10 flex justify-center items-center">
+          <div className="w-[800px] ">
             <div className="mt-8 mb-8">
-              <IconLine></IconLine>
+              <hr style={{ borderTopWidth: 2 }} />
             </div>
           </div>
         </div>
-        <div className="col-span-10 flex flex-col ml-3 mr-3">
+        <div className="w-[800px] flex flex-col ml-3 mr-3">
           <div className="flex justify-between mb-5">
             <span
               className="text-base font-normal font-sans"
@@ -201,7 +199,7 @@ const InfoContact = () => {
             </span>
           </div>
         </div>
-        <div className="col-span-10 flex flex-col ml-3 mr-3">
+        <div className="w-[800px] flex flex-col ml-3 mr-3">
           <div className="flex justify-between mb-6">
             <span
               className="text-lg font-bold font-sans"

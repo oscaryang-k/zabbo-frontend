@@ -7,7 +7,7 @@ interface propsType {
   transactionCost: string;
   transactionName: string;
   transactionDate: string;
-  transactionState: Boolean | null;
+  transactionState: boolean | null;
 }
 const TransactionItem = (props: propsType) => {
   return (

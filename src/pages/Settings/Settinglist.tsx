@@ -4,7 +4,7 @@ import { IconArrowForward } from "../../assets/icons";
 
 interface propsType {
   settingTitle: string;
-  settingUrl: string;
+  gotoUrl: string;
 }
 const SettingList = (props: propsType) => {
   return (
@@ -14,7 +14,7 @@ const SettingList = (props: propsType) => {
           {props.settingTitle}
         </span>
       </div>
-      <NavLink className="flex" to={props.settingUrl}>
+      <NavLink className="flex" to={props.gotoUrl}>
         <IconArrowForward></IconArrowForward>
       </NavLink>
     </div>
@@ -23,7 +23,7 @@ const SettingList = (props: propsType) => {
 
 SettingList.defaultProps = {
   settingTitle: "",
-  settingUrl: "",
+  gotoUrl: "",
 };
 
 export default SettingList;

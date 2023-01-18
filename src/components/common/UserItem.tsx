@@ -13,7 +13,7 @@ export interface propsType {
 const UserItem = (props: propsType) => {
   return (
     <NavLink to={`/contacts/about/@${props.userNickname}`}>
-      <div className="col-span-12 p-3 mb-1 gap-4 flex flex-center items-center justify-between hover:bg-gray-200 cursor-pointer">
+      <div className=" p-3 mb-1  flex flex-center items-center justify-between hover:bg-gray-200 cursor-pointer">
         <div className="flex items-center">
           <div className="mr-4">
             <img
@@ -34,11 +34,7 @@ const UserItem = (props: propsType) => {
         </div>
 
         <div className="flex flex-col ">
-          <div className="col-span-12 ">
-            <div>
-              <span>${props.price}</span>
-            </div>
-          </div>
+          <span>${props.price}</span>
         </div>
       </div>
     </NavLink>

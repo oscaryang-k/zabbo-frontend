@@ -2,12 +2,14 @@ import React from "react";
 import { IconClose } from "../../assets/icons";
 import "./ConfirmDialog.scss";
 interface propsType {
-  display: Boolean | null;
+  display: boolean;
   title: string;
+  okButtonTitle: string;
+  cancelButtonTitle: string;
   content: string;
-  exit: Boolean | null;
-  onOk: () => void | null;
-  onCancel: () => void | null;
+  exit: boolean;
+  onOk: () => void;
+  onCancel: () => void;
 }
 
 const ConfirmDialog = (props: propsType) => {
@@ -20,7 +22,10 @@ const ConfirmDialog = (props: propsType) => {
       <div className="flex confirm-dialog-content">
         <div className="flex flex-col">
           {props.exit ? (
-            <div className="flex flex-row-reverse">
+            <div
+              className="flex flex-row-reverse hover:cursor-pointer"
+              onClick={props.onCancel}
+            >
               <IconClose></IconClose>
             </div>
           ) : null}
@@ -61,8 +66,9 @@ ConfirmDialog.defaultProps = {
   display: false,
   title: "",
   content: "",
-  onCancel: null,
-  onOk: null,
+  okButtonTitle: "OK",
+  cancelButtonTitle: "Cancel",
+
   exit: false,
 };
 export default ConfirmDialog;

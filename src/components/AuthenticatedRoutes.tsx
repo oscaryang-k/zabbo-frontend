@@ -7,6 +7,9 @@ import PageContracts from "../pages/Contracts/PageContracts";
 import PageContacts from "../pages/Contacts/PageContacts";
 import PageSettings from "../pages/Settings/PageSettings";
 import PageInfoContact from "../pages/Contacts/InfoContact";
+import PageNotifications from "../pages/Settings/SubSettings/Notifications";
+import PageSecurity from "../pages/Settings/SubSettings/Security";
+import PageTermaAndConditions from "../pages/Settings/SubSettings/TermsAndConditions";
 function AuthenticatedRoutes() {
   return (
     <Routes>
@@ -31,6 +34,21 @@ function AuthenticatedRoutes() {
           path="settings"
           index
           element={<PageSettings></PageSettings>}
+        ></Route>
+        <Route
+          path="settings/notifications"
+          index
+          element={<PageNotifications></PageNotifications>}
+        ></Route>
+        <Route
+          path="settings/security"
+          index
+          element={<PageSecurity></PageSecurity>}
+        ></Route>
+        <Route
+          path="settings/terms&conditions"
+          index
+          element={<PageTermaAndConditions></PageTermaAndConditions>}
         ></Route>
       </Route>
     </Routes>
