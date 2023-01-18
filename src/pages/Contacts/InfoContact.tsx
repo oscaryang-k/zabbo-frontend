@@ -33,17 +33,16 @@ const InfoContact = () => {
               <IconSeeMore></IconSeeMore>
               <ul className="dropdown-menu-body">
                 <li>
-                  <div className="m-2 text-sm">
+                  <div className=" text-sm p-3">
                     <NavLink to={""} style={{ color: "#312F2F" }}>
                       New engagement
                     </NavLink>
                   </div>
-
                   <IconShortLine></IconShortLine>
                 </li>
 
                 <li>
-                  <div className="m-2 text-sm">
+                  <div className=" text-sm p-3">
                     <NavLink to={""} style={{ color: "#312F2F" }}>
                       Edit
                     </NavLink>
@@ -51,7 +50,7 @@ const InfoContact = () => {
                   <IconShortLine></IconShortLine>
                 </li>
                 <li>
-                  <div className="m-2 text-sm">
+                  <div className=" text-sm p-3">
                     <NavLink to={""} style={{ color: "#312F2F" }}>
                       Delete
                     </NavLink>
@@ -59,7 +58,7 @@ const InfoContact = () => {
                   <IconShortLine></IconShortLine>
                 </li>
                 <li>
-                  <div className="m-2 text-sm">
+                  <div className=" text-sm p-3">
                     <NavLink to={""} style={{ color: "#312F2F" }}>
                       Share
                     </NavLink>
