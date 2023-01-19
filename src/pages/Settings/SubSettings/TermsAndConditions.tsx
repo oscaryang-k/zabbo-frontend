@@ -4,9 +4,9 @@ import { IconArrowLeft } from "../../../assets/icons";
 
 const TermsAndConditions = () => {
   return (
-    <div className="page-content-wrapper mr-20 ml-20">
-      <div className="w-[800px]">
-        <div className="">
+    <div className="page-content-wrapper ">
+      <div className="grid grid-cols-12 gap-2">
+        <div className="col-span-10">
           <div className="flex items-center">
             <NavLink to="/settings" className="flex mb-11 mr-5">
               <IconArrowLeft></IconArrowLeft>
@@ -19,7 +19,7 @@ const TermsAndConditions = () => {
           </div>
         </div>
         <div
-          className="w-[800px] pl-8 pt-8 pb-8 pr-8 "
+          className="col-span-10 pl-8 pt-8 pb-8 pr-8 "
           style={{ backgroundColor: "#F5F5F5", borderRadius: 20 }}
         >
           <div className="flex flex-col">

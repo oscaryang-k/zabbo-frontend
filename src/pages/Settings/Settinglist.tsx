@@ -9,8 +9,8 @@ interface propsType {
 const SettingList = (props: propsType) => {
   return (
     <div className="flex justify-between items-center mb-5 mt-5">
-      <div className="flex">
-        <span className="text-base" style={{ color: "#312F2F" }}>
+      <div className="flex flex-center">
+        <span className="text-base flex" style={{ color: "#312F2F" }}>
           {props.settingTitle}
         </span>
       </div>

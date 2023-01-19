@@ -1,6 +1,8 @@
-import { IconPlus } from "../../assets/icons";
+import { NavLink } from "react-router-dom";
+import { IconArrowRight, IconPlus } from "../../assets/icons";
 import { HeaderButton } from "../../components/buttons";
 import StatisticsCards from "../../components/common/StatisticsCards";
+import TransactionItem from "../../components/common/TransactionItem";
 
 function PageContracts() {
   return (
@@ -11,14 +13,95 @@ function PageContracts() {
             <div className="">
               <h2 className="font-bold text-2xl">Contracts</h2>
             </div>
-            <div className="flex items-center gap-4">
+            <NavLink
+              className="flex items-center gap-4"
+              to="contract/add-contract"
+            >
               <HeaderButton>
                 <IconPlus></IconPlus>
               </HeaderButton>
-            </div>
+            </NavLink>
           </div>
           <div className="mt-8">
-            <StatisticsCards nActivity={5} nPending={4} nCompleted={4}></StatisticsCards>
+            <StatisticsCards
+              nContracts={88}
+              nPending={4}
+              nCompleted={4}
+              isContracts={true}
+            ></StatisticsCards>
+          </div>
+          <div className="mt-8">
+            <div className="col-span-10 flex flex-col ml-3 mr-3">
+              <div className="flex justify-between mb-6">
+                <span
+                  className="text-lg font-bold font-sans"
+                  style={{ color: "#606060" }}
+                >
+                  History
+                </span>
+                <NavLink to="" className="flex items-center">
+                  <IconArrowRight></IconArrowRight>
+                </NavLink>
+              </div>
+              <div className="flex flex-col">
+                <TransactionItem
+                  isComplete={true}
+                  isCompleteState={true}
+                  transactionName="TransactionName"
+                  sendOrRecive={false}
+                  transactionCost="2350"
+                  transactionDate="02-12-22"
+                ></TransactionItem>
+                <TransactionItem
+                  isComplete={false}
+                  isCompleteState={true}
+                  transactionName="TransactionName"
+                  sendOrRecive={true}
+                  transactionCost="2350"
+                  transactionDate="02-12-22"
+                ></TransactionItem>
+                <TransactionItem
+                  isComplete={false}
+                  isCompleteState={true}
+                  transactionName="TransactionName"
+                  sendOrRecive={true}
+                  transactionCost="2350"
+                  transactionDate="02-12-22"
+                ></TransactionItem>{" "}
+                <TransactionItem
+                  isComplete={false}
+                  isCompleteState={true}
+                  transactionName="TransactionName"
+                  sendOrRecive={true}
+                  transactionCost="2350"
+                  transactionDate="02-12-22"
+                ></TransactionItem>{" "}
+                <TransactionItem
+                  isComplete={false}
+                  isCompleteState={true}
+                  transactionName="TransactionName"
+                  sendOrRecive={true}
+                  transactionCost="2350"
+                  transactionDate="02-12-22"
+                ></TransactionItem>{" "}
+                <TransactionItem
+                  isComplete={false}
+                  isCompleteState={true}
+                  transactionName="TransactionName"
+                  sendOrRecive={true}
+                  transactionCost="2350"
+                  transactionDate="02-12-22"
+                ></TransactionItem>{" "}
+                <TransactionItem
+                  isComplete={false}
+                  isCompleteState={true}
+                  transactionName="TransactionName"
+                  sendOrRecive={true}
+                  transactionCost="2350"
+                  transactionDate="02-12-22"
+                ></TransactionItem>
+              </div>
+            </div>
           </div>
         </div>
       </div>
