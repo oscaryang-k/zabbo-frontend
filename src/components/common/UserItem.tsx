@@ -12,7 +12,7 @@ export interface propsType {
 
 const UserItem = (props: propsType) => {
   return (
-    <NavLink to={`/contacts/about/@${props.userNickname}`}>
+    <NavLink to={`/contacts/about/${props.userNickname}`}>
       <div className=" p-3 mb-1  flex flex-center items-center justify-between hover:bg-gray-200 cursor-pointer">
         <div className="flex items-center">
           <div className="mr-4">
@@ -25,7 +25,7 @@ const UserItem = (props: propsType) => {
 
           <div className="items-start flex flex-col">
             <span className="text-base font-bold mb-1">
-              @{props.userNickname}
+              {props.userNickname}
             </span>
             <span className="text-sm ">
               {!props.date ? props.content : props.date}

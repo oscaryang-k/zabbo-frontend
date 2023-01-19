@@ -1,4 +1,4 @@
-import React from "react";
+
 import { IconClose } from "../../assets/icons";
 import "./ConfirmDialog.scss";
 interface propsType {

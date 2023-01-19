@@ -1,5 +1,3 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
 import { IconDoubleCheck, IconEdit, IconLoading } from "../../assets/icons";
 
 interface StatisticsProps {
@@ -19,12 +17,7 @@ function StatisticsCards({
 }: StatisticsProps) {
   return (
     <div className="grid grid-cols-3 gap-6">
-      <NavLink
-        className="card-status active p-5 rounded-2xl "
-        to={`${
-          isContracts ? "/contracts/open-contracts" : "/contracts/activity"
-        }`}
-      >
+      <div className="card-status active p-5 rounded-2xl ">
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-base">
@@ -38,8 +31,8 @@ function StatisticsCards({
             <IconLoading></IconLoading>
           </div>
         </div>
-      </NavLink>
-      <NavLink className="card-status p-5 rounded-2xl " to="/contracts/pending">
+      </div>
+      <div className="card-status p-5 rounded-2xl ">
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-base">Pending</span>
@@ -49,11 +42,8 @@ function StatisticsCards({
             <IconEdit></IconEdit>
           </div>
         </div>
-      </NavLink>
-      <NavLink
-        className="card-status p-5 rounded-2xl "
-        to="/contracts/completed"
-      >
+      </div>
+      <div className="card-status p-5 rounded-2xl ">
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-base">Completed</span>
@@ -63,7 +53,7 @@ function StatisticsCards({
             <IconDoubleCheck></IconDoubleCheck>
           </div>
         </div>
-      </NavLink>
+      </div>
     </div>
   );
 }

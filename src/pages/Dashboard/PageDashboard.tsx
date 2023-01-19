@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import {
   IconAlarm,
   IconArrowRight,
@@ -12,9 +13,11 @@ import "./PageDashboard.scss";
 
 function PageDashboard() {
   const [showTips, setShowTips] = React.useState(true);
+  // const [showMenu, setShowMenu] = React.useState(false);
   const HiddenTips = () => {
     setShowTips(false);
   };
+
   return (
     <div className="page-content-wrapper">
       <div className="grid grid-cols-12 gap-2">
@@ -24,9 +27,45 @@ function PageDashboard() {
               <h2 className="font-bold text-2xl">Good morning, Oscar Yang</h2>
             </div>
             <div className="flex items-center gap-4">
-              <HeaderButton>
-                <IconPlus></IconPlus>
-              </HeaderButton>
+              <div
+                className="hover:cursor-pointer relative"
+                // onMouseOut={() => {
+                //   setShowMenu(false);
+                // }}
+              >
+                <div
+                // onClick={() => {
+                //   setShowMenu(true);
+                // }}
+                >
+                  <HeaderButton>
+                    <IconPlus></IconPlus>
+                  </HeaderButton>
+                </div>
+
+                {/* <ul
+                  className="rounded-lg border border-neutral-100 absolute z-40 top-12 right-0 w-[240px] bg-white"
+                  // style={{ display: `${showMenu ? "block" : "none"}` }}
+                >
+                  <li className="cursor-pointer">
+                    <div className=" text-sm p-3 ">
+                      <NavLink to={""} style={{ color: "#312F2F" }}>
+                        Send NFTs
+                      </NavLink>
+                    </div>
+                    <hr />
+                  </li>
+
+                  <li className="cursor-pointer">
+                    <div className=" text-sm p-3">
+                      <NavLink to={""} style={{ color: "#312F2F" }}>
+                        Create a new contract
+                      </NavLink>
+                    </div>
+                  </li> */}
+                {/* </ul> */}
+              </div>
+
               <HeaderButton isActive={true}>
                 <IconAlarm></IconAlarm>
               </HeaderButton>
@@ -66,7 +105,9 @@ function PageDashboard() {
             <div className="mt-8">
               <div className="flex justify-between items-center  mb-5">
                 <h2 className="text-2xl font-bold"> Monthly Transactions </h2>
-                <IconArrowRight></IconArrowRight>
+                <NavLink to="/dashboard/transactions">
+                  <IconArrowRight></IconArrowRight>
+                </NavLink>
               </div>
               <span> Nothing to see here yet </span>
             </div>
