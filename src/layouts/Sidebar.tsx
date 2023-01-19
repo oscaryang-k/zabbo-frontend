@@ -1,6 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { MainLogo, IconDashboard, IconContracts, IconContacts, IconSettings } from "../assets/icons";
+import {
+  MainLogo,
+  IconDashboard,
+  IconContracts,
+  IconContacts,
+  IconSettings,
+} from "../assets/icons";
 
 function Sidebar() {
   return (
@@ -9,7 +15,7 @@ function Sidebar() {
         <MainLogo />
       </div>
       <div className="sidebar-navigation">
-        <NavLink className="sidebar-nav-link" to="/">
+        <NavLink className="sidebar-nav-link" to="/dashboard">
           <IconDashboard></IconDashboard>
           <span>Dashboard</span>
         </NavLink>

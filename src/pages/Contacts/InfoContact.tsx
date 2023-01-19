@@ -5,7 +5,7 @@ import {
   IconArrowRight,
   IconInstagram,
   IconLinkedin,
-  IconSeeMore,
+  IconHorizontalSeeMore,
   IconTelegram,
   IconTwitter,
   IconUserAvatar,
@@ -35,7 +35,7 @@ const InfoContact = () => {
               className="hover:cursor-pointer dropdownMenu"
               style={{ position: "relative" }}
             >
-              <IconSeeMore></IconSeeMore>
+              <IconHorizontalSeeMore></IconHorizontalSeeMore>
               <ul className="dropdown-menu-body">
                 <li>
                   <div className=" text-sm p-3">
@@ -62,7 +62,7 @@ const InfoContact = () => {
                     }}
                   >
                     <div style={{ color: "#312F2F" }}>Delete</div>
-                  </div>{" "}
+                  </div>
                   <hr />
                 </li>
                 <li>
@@ -82,7 +82,7 @@ const InfoContact = () => {
               className="font-bold text-lg font-sans mb-5 mt-3"
               style={{ color: "#606060" }}
             >
-              @johndoe123
+              johndoe123
             </span>
             <span
               className="text-base font-normal mb-5"
@@ -153,7 +153,7 @@ const InfoContact = () => {
               className="text-base font-normal font-sans"
               style={{ color: "#000" }}
             >
-              johndoe@gmail.com
+              johndoegmail.com
             </span>
           </div>
           <div className="flex justify-between mb-5">

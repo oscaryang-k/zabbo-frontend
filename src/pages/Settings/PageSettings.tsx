@@ -85,7 +85,7 @@ function PageSettings() {
               className="text-sm hover:cursor-pointer"
               style={{ color: "#312F2F" }}
             >
-              V.0.1 Zabbo{" "}
+              V.0.1 Zabbo
             </span>
           </div>
         </div>

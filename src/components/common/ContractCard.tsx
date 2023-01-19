@@ -12,7 +12,7 @@ export interface propsType {
 
 const ContractCard = (props: propsType) => {
   return (
-    <NavLink to={`/contacts/about/@${props.userNickname}`}>
+    <NavLink to={`/contracts/${props.userNickname}`}>
       <div
         className=" p-8 mb-4  flex flex-center items-center justify-between hover:bg-gray-200 cursor-pointer  rounded-2xl"
         style={{ backgroundColor: "#F5F5F5" }}
@@ -31,7 +31,7 @@ const ContractCard = (props: propsType) => {
               {props.contractTitle}
             </span>
             <span className="text-sm " style={{ color: "#606060" }}>
-              @{props.userNickname}
+              {props.userNickname}
             </span>
           </div>
         </div>

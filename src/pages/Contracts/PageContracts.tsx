@@ -39,11 +39,16 @@ function PageContracts() {
                 >
                   History
                 </span>
-                <NavLink to="" className="flex items-center">
+                <NavLink to="/contracts/history" className="flex items-center">
                   <IconArrowRight></IconArrowRight>
                 </NavLink>
               </div>
               <div className="flex flex-col">
+                <div className="flex items-center justify-center">
+                  <span className="text-sm" style={{ color: "#606060" }}>
+                    Nov 30, 2022
+                  </span>
+                </div>
                 <TransactionItem
                   isComplete={true}
                   isCompleteState={true}
@@ -52,46 +57,6 @@ function PageContracts() {
                   transactionCost="2350"
                   transactionDate="02-12-22"
                 ></TransactionItem>
-                <TransactionItem
-                  isComplete={false}
-                  isCompleteState={true}
-                  transactionName="TransactionName"
-                  sendOrRecive={true}
-                  transactionCost="2350"
-                  transactionDate="02-12-22"
-                ></TransactionItem>
-                <TransactionItem
-                  isComplete={false}
-                  isCompleteState={true}
-                  transactionName="TransactionName"
-                  sendOrRecive={true}
-                  transactionCost="2350"
-                  transactionDate="02-12-22"
-                ></TransactionItem>{" "}
-                <TransactionItem
-                  isComplete={false}
-                  isCompleteState={true}
-                  transactionName="TransactionName"
-                  sendOrRecive={true}
-                  transactionCost="2350"
-                  transactionDate="02-12-22"
-                ></TransactionItem>{" "}
-                <TransactionItem
-                  isComplete={false}
-                  isCompleteState={true}
-                  transactionName="TransactionName"
-                  sendOrRecive={true}
-                  transactionCost="2350"
-                  transactionDate="02-12-22"
-                ></TransactionItem>{" "}
-                <TransactionItem
-                  isComplete={false}
-                  isCompleteState={true}
-                  transactionName="TransactionName"
-                  sendOrRecive={true}
-                  transactionCost="2350"
-                  transactionDate="02-12-22"
-                ></TransactionItem>{" "}
                 <TransactionItem
                   isComplete={false}
                   isCompleteState={true}
