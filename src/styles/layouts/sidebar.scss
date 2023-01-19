@@ -5,4 +5,41 @@
   bottom: 0;
   z-index: 101;
   width: var(--sidebar-width);
+  background: hsl(0, 0%, 100%);
+
+  .main-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 40px 0 40px;
+  }
+
+  .sidebar-navigation {
+    padding: 0 24px;
+    .sidebar-nav-link {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      color: #9c9c9c;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      span {
+        margin-left: 12px;
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #000000;
+      }
+
+      &:hover:not(.active) {
+        background-color: #e2e2e2;
+        color: #454545;
+      }
+    }
+  }
 }
