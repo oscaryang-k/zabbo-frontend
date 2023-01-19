@@ -2,7 +2,7 @@ import React from "react";
 
 interface HeaderButtonProps {
   children: React.ReactNode;
-  isActive: Boolean;
+  isActive: boolean;
 }
 
 function HeaderButton(props: HeaderButtonProps) {

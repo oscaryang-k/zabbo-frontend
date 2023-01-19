@@ -1,10 +1,20 @@
 import React from "react";
-import { IconAlarm, IconArrowRight, IconClose, IconLamp, IconPlus } from "../../assets/icons";
+import {
+  IconAlarm,
+  IconArrowRight,
+  IconClose,
+  IconLamp,
+  IconPlus,
+} from "../../assets/icons";
 import { HeaderButton } from "../../components/buttons";
 import StatisticsCards from "../../components/common/StatisticsCards";
 import "./PageDashboard.scss";
 
 function PageDashboard() {
+  const [showTips, setShowTips] = React.useState(true);
+  const HiddenTips = () => {
+    setShowTips(false);
+  };
   return (
     <div className="page-content-wrapper">
       <div className="grid grid-cols-12 gap-2">
@@ -28,19 +38,28 @@ function PageDashboard() {
             </div>
           </div>
           <div className="mt-8">
-            <StatisticsCards></StatisticsCards>
-            <div className="flex justify-between rounded-2xl bg-primary-500 mt-8 bg-primary-400 p-5">
+            <StatisticsCards
+              isContracts={false}
+              nActivity={6}
+              nCompleted={3}
+              nPending={3}
+            ></StatisticsCards>
+            <div
+              className={`flex justify-between rounded-2xl bg-primary-500 mt-8 bg-primary-400 p-5 ${
+                !showTips ? "hidden" : null
+              } `}
+            >
               <div className="bg-primary-800 flex items-center justify-center w-24 h-24 rounded-md text-white">
                 <IconLamp></IconLamp>
               </div>
               <div className="flex flex-col flex-grow ml-5 justify-center">
                 <h3 className="text-2xl">Zabbo Fact</h3>
                 <span className="text-medium">
-                  It is a long established fact that a reader will be distracted by the readable content of a page when
-                  looking at its layout.
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
                 </span>
               </div>
-              <div className="ml-6">
+              <div className="ml-6 hover:cursor-pointer" onClick={HiddenTips}>
                 <IconClose></IconClose>
               </div>
             </div>

@@ -4,17 +4,17 @@ import { IconArrowForward } from "../../assets/icons";
 
 interface propsType {
   settingTitle: string;
-  settingUrl: string;
+  gotoUrl: string;
 }
 const SettingList = (props: propsType) => {
   return (
     <div className="flex justify-between items-center mb-5 mt-5">
-      <div className="flex">
-        <span className="text-base" style={{ color: "#312F2F" }}>
+      <div className="flex flex-center">
+        <span className="text-base flex" style={{ color: "#312F2F" }}>
           {props.settingTitle}
         </span>
       </div>
-      <NavLink className="flex" to={props.settingUrl}>
+      <NavLink className="flex" to={props.gotoUrl}>
         <IconArrowForward></IconArrowForward>
       </NavLink>
     </div>
@@ -23,7 +23,7 @@ const SettingList = (props: propsType) => {
 
 SettingList.defaultProps = {
   settingTitle: "",
-  settingUrl: "",
+  gotoUrl: "",
 };
 
 export default SettingList;
