@@ -7,12 +7,7 @@ interface HeaderButtonProps {
 
 function HeaderButton(props: HeaderButtonProps) {
   return (
-    <div
-      className="relative w-10 h-10 flex items-center justify-center rounded-md"
-      style={{
-        backgroundColor: "#F5F5F5",
-      }}
-    >
+    <div className="relative w-10 h-10 flex items-center justify-center rounded-md  bg-gray-100  hover:bg-black hover:text-gray-100">
       {props.children}
       {props.isActive && (
         <span
