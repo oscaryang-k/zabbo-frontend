@@ -12,7 +12,7 @@ export interface propsType {
 
 const UserItem = (props: propsType) => {
   return (
-    <NavLink to={`/contacts/about/${props.userNickname}`}>
+    <NavLink to={`/contacts/about/?id=${props.userNickname}`}>
       <div className=" p-3 mb-1  flex flex-center items-center justify-between hover:bg-gray-200 cursor-pointer">
         <div className="flex items-center">
           <div className="mr-4">

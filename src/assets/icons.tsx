@@ -1,4 +1,4 @@
-import { ReactComponent as IconLogo } from "./logo.svg";
+import { ReactComponent as IconLogo } from "./icons/logo.svg";
 import { ReactComponent as IconSort } from "./icons/sort.svg";
 import { ReactComponent as IconPlus } from "./icons/plus.svg";
 import { ReactComponent as IconLamp } from "./icons/lamp.svg";
@@ -7,11 +7,16 @@ import { ReactComponent as IconLine } from "./icons/line.svg";
 import { ReactComponent as IconClose } from "./icons/close.svg";
 import { ReactComponent as IconAlarm } from "./icons/alarm.svg";
 import { ReactComponent as IconEdit } from "./icons/pencil.svg";
+import { ReactComponent as IconPhone } from "./icons/phone.svg";
+import { ReactComponent as IconApple } from "./icons/apple.svg";
+import { ReactComponent as IconEmail } from "./icons/email.svg";
 import { ReactComponent as IconOption } from "./icons/option.svg";
 import { ReactComponent as IconSearch } from "./icons/search.svg";
+import { ReactComponent as IconGoogle } from "./icons/google.svg";
 import { ReactComponent as MainLogo } from "./icons/main-logo.svg";
 import { ReactComponent as IconLoading } from "./icons/loading.svg";
 import { ReactComponent as IconTwitter } from "./icons/twitter.svg";
+import { ReactComponent as IconMetaMask } from "./icons/metamask.svg";
 import { ReactComponent as IconContacts } from "./icons/contacts.svg";
 import { ReactComponent as IconSettings } from "./icons/settings.svg";
 import { ReactComponent as IconLinkedin } from "./icons/linkedin.svg";
@@ -33,6 +38,7 @@ import { ReactComponent as IconHorizontalSeeMore } from "./icons/horizontalSeeMo
 export {
   IconLogo,
   MainLogo,
+  IconApple,
   IconArrowRight,
   IconArrowLeft,
   IconArrowForward,
@@ -45,12 +51,16 @@ export {
   IconDownload,
   IconDoubleCheck,
   IconEdit,
+  IconEmail,
+  IconGoogle,
   IconInstagram,
   IconInfo,
   IconLinkedin,
   IconLine,
+  IconMetaMask,
   IconOption,
   IconPlus,
+  IconPhone,
   IconSearch,
   IconShortLine,
   IconSort,
