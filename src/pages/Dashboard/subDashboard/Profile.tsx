@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import {
   IconArrowLeft,
@@ -162,7 +161,7 @@ const Profile = () => {
             </div>
           </NavLink>
           <div className="flex items-center justify-center mt-8 cursor-pointer">
-            <div className="flex items-center rounded-lg border pt-3 pb-3 pr-16 pl-16 border-black  hover:bg-black hover:text-gray-100">
+            <div className="flex items-center rounded-lg border pt-3 pb-3 pr-16 pl-16 border-black cursor-pointer  hover:bg-black hover:text-gray-100">
               Log Out
             </div>
           </div>

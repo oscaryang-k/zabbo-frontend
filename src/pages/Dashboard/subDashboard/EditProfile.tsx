@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import { HeaderButton } from "../../../components/buttons";
 import { IconUserAvatar, IconMetaMask, IconPlus } from "../../../assets/icons";
-import BaseInput from "../../../components/common/calendar/baseInput";
+import BaseInput from "../../../components/common/BaseInput";
 
 const EditProfile = () => {
   //   const [file, setFile] = React.useState<string>();

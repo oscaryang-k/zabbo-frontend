@@ -1,4 +1,3 @@
-import React from "react";
 import UserItem from "../../components/common/UserItem";
 import AlphabetList from "react-alphabet-list";
 const UserLists = () => {

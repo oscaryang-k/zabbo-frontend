@@ -3,9 +3,10 @@ interface propsType {
   endLabel: any;
   name: string;
   type: string;
+
   onChange: (e: any) => void;
   placeholder: string;
-  value: string;
+  value: any;
 }
 const BaseInput = (props: propsType) => {
   return (
@@ -21,6 +22,7 @@ const BaseInput = (props: propsType) => {
         </div>
         <input
           type={props.type}
+          value={props.value}
           name={props.name}
           onChange={props.onChange}
           className="border rounded-lg text-base p-3 w-full"
@@ -36,7 +38,7 @@ BaseInput.defaultProps = {
   name: "",
   type: "text",
   placeholder: "",
-  value: "",
+  value: null,
   endLabel: "",
 };
 

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 import { IconArrowLeft } from "../../../assets/icons";
-import BaseInput from "../../../components/common/calendar/baseInput";
+import BaseInput from "../../../components/common/BaseInput";
 
 const Links = () => {
   const handleChange = (e: any) => {};
