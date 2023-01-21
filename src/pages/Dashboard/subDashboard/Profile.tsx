@@ -1,80 +1,36 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import {
   IconArrowLeft,
-  IconArrowRight,
-  IconInstagram,
   IconLinkedin,
-  IconHorizontalSeeMore,
-  IconTelegram,
   IconTwitter,
   IconUserAvatar,
-} from "../../assets/icons";
+  IconMetaMask,
+} from "../../../assets/icons";
+import { HeaderButton } from "../../../components/buttons";
 
-import ConfirmDialog from "../../components/common/ConfirmDialog";
-import TransactionItem from "../../components/common/TransactionItem";
-
-import "./contacts.scss";
-
-const InfoContact = () => {
-  const [displayConfirm, setDisplayConfirm] = React.useState(false);
-
-  const onOk = () => {};
+const Profile = () => {
   return (
     <div className="page-content-wrapper">
       <div className=" grid grid-cols-12 gap-2">
-        <div className="col-span-10 flex flex-col ml-3 mr-3">
+        <div className="col-span-8 flex flex-col ml-3 mr-3">
           <div className="flex  pt-12  justify-between ">
-            <div className="">
-              <NavLink to="/contacts">
+            <div className="flex items-center">
+              <NavLink className="flex items-center gap-4 mr-5" to="/dashboard">
                 <IconArrowLeft></IconArrowLeft>
               </NavLink>
+              <div className="">
+                <h2 className="font-bold text-2xl">Profile</h2>
+              </div>
             </div>
-
-            <div
-              className="hover:cursor-pointer dropdownMenu"
+            <NavLink
+              className="hover:cursor-pointer items-center "
               style={{ position: "relative" }}
+              to={"/dashboard/profile/edit"}
             >
-              <IconHorizontalSeeMore></IconHorizontalSeeMore>
-
-              <ul className="dropdown-menu-body">
-                <li>
-                  <div className=" text-sm p-3">
-                    <NavLink to={""} style={{ color: "#312F2F" }}>
-                      New engagement
-                    </NavLink>
-                  </div>
-                  <hr />
-                </li>
-
-                <li>
-                  <div className=" text-sm p-3">
-                    <NavLink to={""} style={{ color: "#312F2F" }}>
-                      Edit
-                    </NavLink>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div
-                    className=" text-sm p-3 hover:cursor-pointer"
-                    onClick={(e) => {
-                      setDisplayConfirm(true);
-                    }}
-                  >
-                    <div style={{ color: "#312F2F" }}>Delete</div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div className=" text-sm p-3">
-                    <NavLink to={""} style={{ color: "#312F2F" }}>
-                      Share
-                    </NavLink>
-                  </div>
-                </li>
-              </ul>
-            </div>
+              <h2 className="font-base text-base" style={{ color: "#312F2F" }}>
+                Edit
+              </h2>
+            </NavLink>
           </div>
 
           <div className="flex flex-col items-center pt-12">
@@ -98,23 +54,18 @@ const InfoContact = () => {
             <NavLink to="" className="mr-5 ">
               <IconTwitter></IconTwitter>
             </NavLink>
-            <NavLink to="" className="mr-5">
-              <IconInstagram></IconInstagram>
-            </NavLink>
-            <NavLink to="" className="mr-5">
-              <IconTelegram></IconTelegram>
-            </NavLink>
+
             <NavLink to="" className="">
               <IconLinkedin></IconLinkedin>
             </NavLink>
           </div>
-          <div className="col-span-10 ">
+          <div className="col-span-8 ">
             <div className="mt-8 mb-8">
               <hr style={{ borderTopWidth: 2 }} />
             </div>
           </div>
         </div>
-        <div className="col-span-10 flex flex-col ml-3 mr-3">
+        <div className="col-span-8 flex flex-col ml-3 mr-3">
           <div className="flex justify-between mb-5">
             <span
               className="text-base font-normal font-sans"
@@ -200,43 +151,23 @@ const InfoContact = () => {
             </span>
           </div>
         </div>
-        <div className="col-span-10 flex flex-col ml-3 mr-3">
-          <div className="flex justify-between mb-6">
-            <span
-              className="text-lg font-bold font-sans"
-              style={{ color: "#606060" }}
-            >
-              History
-            </span>
-            <NavLink to="" className="flex items-center">
-              <IconArrowRight></IconArrowRight>
-            </NavLink>
-          </div>
-          <div className="flex flex-col">
-            <TransactionItem
-              transactionName="TransactionName"
-              sendOrRecive={false}
-              transactionCost="2350"
-              transactionDate="02-12-22"
-            ></TransactionItem>
-            <TransactionItem
-              transactionName="TransactionName"
-              sendOrRecive={true}
-              transactionCost="2350"
-              transactionDate="02-12-22"
-            ></TransactionItem>
+        <div className="col-span-8 flex flex-col">
+          <NavLink className="flex bg-gray-100 flex p-3 rounded-xl" to={""}>
+            <HeaderButton>
+              <IconMetaMask />
+            </HeaderButton>
+            <div className="flex items-center ml-3">
+              <span className="text-sm">Meta Mask</span>
+            </div>
+          </NavLink>
+          <div className="flex items-center justify-center mt-8 cursor-pointer">
+            <div className="flex items-center rounded-lg border pt-3 pb-3 pr-16 pl-16 border-black cursor-pointer  hover:bg-black hover:text-gray-100">
+              Log Out
+            </div>
           </div>
         </div>
       </div>
-      <ConfirmDialog
-        title="Delete Contact"
-        display={displayConfirm}
-        content="are you sure want to delete this contact?"
-        exit={false}
-        onOk={onOk}
-        onCancel={() => setDisplayConfirm(false)}
-      />
     </div>
   );
 };
-export default InfoContact;
+export default Profile;

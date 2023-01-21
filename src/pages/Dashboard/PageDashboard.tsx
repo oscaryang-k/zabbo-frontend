@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
 import {
   IconAlarm,
   IconArrowRight,
@@ -9,9 +10,10 @@ import {
 } from "../../assets/icons";
 import { HeaderButton } from "../../components/buttons";
 import StatisticsCards from "../../components/common/StatisticsCards";
+
 import "./PageDashboard.scss";
 
-function PageDashboard() {
+const PageDashboard = () => {
   const [showTips, setShowTips] = React.useState(true);
   // const [showMenu, setShowMenu] = React.useState(false);
   const HiddenTips = () => {
@@ -69,11 +71,13 @@ function PageDashboard() {
               <HeaderButton isActive={true}>
                 <IconAlarm></IconAlarm>
               </HeaderButton>
-              <img
-                className="inline-block h-10 w-10 rounded-md ring-white"
-                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              />
+              <NavLink to={"/dashboard/profile"}>
+                <img
+                  className="inline-block h-10 w-10 rounded-md ring-white"
+                  src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
+              </NavLink>
             </div>
           </div>
           <div className="mt-8">
@@ -123,6 +127,6 @@ function PageDashboard() {
       </div>
     </div>
   );
-}
+};
 
 export default PageDashboard;
