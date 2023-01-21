@@ -1,13 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import SignUpHeader from "./SignUpHeader";
+import BaseInput from "../../../components/common/BaseInput";
 
-import SignupHeader from "./SignUp/SignUpHeader";
-import BaseInput from "../../components/common/BaseInput";
-
-const SignUp = () => {
+const SignUpWithEmail = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = React.useState<string>("");
 
   const checkEmailType = (email: string) => {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       return true;
     }
     return false;
@@ -15,7 +16,7 @@ const SignUp = () => {
   return (
     <>
       <div>
-        <SignupHeader />
+        <SignUpHeader />
       </div>
       <div className="flex justify-center items-center flex-col mt-40 ">
         <div className="w-[576px]">
@@ -43,6 +44,9 @@ const SignUp = () => {
                 email ? "bg-black" : ""
               } rounded-lg pt-2 pb-2 mt-8 text-white cursor-pointer disabled:text-[#FFFFFF] disabled:bg-[#CCCCCC]`}
               disabled={checkEmailType(email) ? false : true}
+              onClick={() => {
+                navigate("/signup/email-verify");
+              }}
             >
               <span>Next</span>
             </button>
@@ -53,4 +57,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpWithEmail;

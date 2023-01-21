@@ -7,10 +7,12 @@ import { ReactComponent as IconLine } from "./icons/line.svg";
 import { ReactComponent as IconClose } from "./icons/close.svg";
 import { ReactComponent as IconAlarm } from "./icons/alarm.svg";
 import { ReactComponent as IconEdit } from "./icons/pencil.svg";
+import { ReactComponent as IconPhone } from "./icons/phone.svg";
+import { ReactComponent as IconApple } from "./icons/apple.svg";
+import { ReactComponent as IconEmail } from "./icons/email.svg";
 import { ReactComponent as IconOption } from "./icons/option.svg";
 import { ReactComponent as IconSearch } from "./icons/search.svg";
 import { ReactComponent as IconGoogle } from "./icons/google.svg";
-import { ReactComponent as IconApple } from "./icons/apple.svg";
 import { ReactComponent as MainLogo } from "./icons/main-logo.svg";
 import { ReactComponent as IconLoading } from "./icons/loading.svg";
 import { ReactComponent as IconTwitter } from "./icons/twitter.svg";
@@ -49,6 +51,7 @@ export {
   IconDownload,
   IconDoubleCheck,
   IconEdit,
+  IconEmail,
   IconGoogle,
   IconInstagram,
   IconInfo,
@@ -57,6 +60,7 @@ export {
   IconMetaMask,
   IconOption,
   IconPlus,
+  IconPhone,
   IconSearch,
   IconShortLine,
   IconSort,

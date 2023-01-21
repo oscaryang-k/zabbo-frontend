@@ -2,7 +2,7 @@
 // import "react-tabs/style/react-tabs.css";
 
 // import BaseInput from "../../components/common/BaseInput";
-import { MainLogo } from "../../assets/icons";
+import { MainLogo } from "../../../assets/icons";
 
 import "./SignIn.scss";
 // import "react-phone-input-2/lib/style.css";

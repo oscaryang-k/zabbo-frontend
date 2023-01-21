@@ -1,4 +1,4 @@
-import { MainLogo } from "../../assets/icons";
+import { MainLogo } from "../../../assets/icons";
 import "./SignIn.scss";
 import "./SignIn.scss";
 const VerifyByEmail = () => {

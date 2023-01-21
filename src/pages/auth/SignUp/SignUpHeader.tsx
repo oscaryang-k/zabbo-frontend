@@ -1,7 +1,7 @@
 import { HeaderButton } from "../../../components/buttons";
 import { MainLogo, IconClose } from "../../../assets/icons";
 
-const SignupHeader = () => {
+const SignUpHeader = () => {
   return (
     <div className="mt-11 ml-10 mr-10 ml-10">
       <div className="flex justify-between">
@@ -45,4 +45,4 @@ const SignupHeader = () => {
   );
 };
 
-export default SignupHeader;
+export default SignUpHeader;

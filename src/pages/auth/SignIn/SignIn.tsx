@@ -2,8 +2,8 @@ import React from "react";
 import { Tab } from "@headlessui/react";
 import PhoneInput from "react-phone-input-2";
 
-import BaseInput from "../../components/common/BaseInput";
-import { IconApple, IconGoogle, MainLogo } from "../../assets/icons";
+import BaseInput from "../../../components/common/BaseInput";
+import { IconApple, IconGoogle, MainLogo } from "../../../assets/icons";
 
 import "./SignIn.scss";
 import { NavLink } from "react-router-dom";
