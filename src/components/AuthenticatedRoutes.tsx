@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 
 import PageMainWallet from "../pages/wallet/wallet";
 import PageChooseWallet from "../pages/wallet/chooseWallet";
+import PageWalletWithEmail from "../pages/wallet/WalletWithEmail";
 import PageSignIn from "../pages/auth/SignIn/SignIn";
 import PageSignUp from "../pages/auth/SignUp/SignUp";
 import PageWelcome from "../pages/welcome/Welcome";
@@ -123,6 +124,11 @@ function AuthenticatedRoutes() {
         path="/wallet/connect/choose-wallet"
         index
         element={<PageChooseWallet />}
+      />
+      <Route
+        path="/wallet/connect/email"
+        index
+        element={<PageWalletWithEmail />}
       />
     </Routes>
   );

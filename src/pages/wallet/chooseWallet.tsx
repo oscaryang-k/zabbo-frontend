@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Search from "../../components/common/Search";
 import { HeaderButton } from "../../components/buttons";

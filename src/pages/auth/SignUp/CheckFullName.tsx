@@ -33,7 +33,7 @@ const CheckFullName = () => {
         <div className="w-[576px] ">
           <div className="flex mb-16 flex-col items-center">
             <span className="text-2xl text-center  ">
-              "Would you like to add any personal info to your profile? You can
+              Would you like to add any personal info to your profile? You can
               always do this later.
             </span>
           </div>
