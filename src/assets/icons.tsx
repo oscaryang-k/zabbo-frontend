@@ -15,7 +15,9 @@ import { ReactComponent as IconSearch } from "./icons/search.svg";
 import { ReactComponent as IconGoogle } from "./icons/google.svg";
 import { ReactComponent as MainLogo } from "./icons/main-logo.svg";
 import { ReactComponent as IconLoading } from "./icons/loading.svg";
+import { ReactComponent as IconChecked } from "./icons/checked.svg";
 import { ReactComponent as IconTwitter } from "./icons/twitter.svg";
+import { ReactComponent as IconWelcome } from "./icons/welcome.svg";
 import { ReactComponent as IconMetaMask } from "./icons/metamask.svg";
 import { ReactComponent as IconContacts } from "./icons/contacts.svg";
 import { ReactComponent as IconSettings } from "./icons/settings.svg";
@@ -23,6 +25,7 @@ import { ReactComponent as IconLinkedin } from "./icons/linkedin.svg";
 import { ReactComponent as IconTelegram } from "./icons/telegram.svg";
 import { ReactComponent as IconDownload } from "./icons/download.svg";
 import { ReactComponent as IconCalendar } from "./icons/calendar.svg";
+import { ReactComponent as IconUnChecked } from "./icons/unChecked.svg";
 import { ReactComponent as IconInstagram } from "./icons/instagram.svg";
 import { ReactComponent as IconShortLine } from "./icons/shortline.svg";
 import { ReactComponent as IconDashboard } from "./icons/dashboard.svg";
@@ -45,6 +48,7 @@ export {
   IconAlarm,
   IconCalendar,
   IconContacts,
+  IconChecked,
   IconClose,
   IconContracts,
   IconDashboard,
@@ -67,6 +71,8 @@ export {
   IconTelegram,
   IconTwitter,
   IconUserAvatar,
+  IconUnChecked,
+  IconWelcome,
   IconLoading,
   IconLamp,
   IconSettings,

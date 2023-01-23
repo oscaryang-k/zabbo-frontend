@@ -1,10 +1,13 @@
 .react-tel-input .form-control {
-  height: 48px !important;
+  height: 49.83px !important;
   border: solid 1px #d1d1d1 !important;
   border-radius: 8px !important;
   background: #fbfbfb !important;
   width: 100%;
   padding: 12px !important;
+}
+.special-label {
+  display: none !important;
 }
 .display {
   border-right: 1px solid rgba(0, 0, 0, 0.2);
