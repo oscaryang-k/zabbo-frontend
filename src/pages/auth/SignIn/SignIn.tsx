@@ -12,6 +12,14 @@ import { NavLink } from "react-router-dom";
 const classNames = (...classes: any) => {
   return classes.filter(Boolean).join(" ");
 };
+
+const checkEmailType = (email: string) => {
+  if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    return true;
+  }
+  return false;
+};
+
 const SignIn = () => {
   const [email, setEmail] = React.useState<string>("");
   const [phone, setPhone] = React.useState<string>("");
@@ -75,13 +83,20 @@ const SignIn = () => {
                 >
                   <BaseInput
                     name="email"
+                    autoFocus={true}
                     value={email}
                     onChange={onEmail}
                     placeholder="Enter Email"
                   />
-                  <div className="flex items-center justify-center  rounded-lg border pt-3 pb-3 mt-5 border-black cursor-pointer  hover:bg-black hover:text-gray-100">
+
+                  <button
+                    className={`flex justify-center w-[296px]  items-center ${
+                      email ? "bg-white text-black border border-black" : ""
+                    } rounded-lg  text-white cursor-pointer pt-3 pb-3 mt-5 disabled:text-[#FFFFFF] disabled:bg-[#CCCCCC] hover:bg-black hover:text-gray-100`}
+                    disabled={checkEmailType(email) ? false : true}
+                  >
                     <span>Continue</span>
-                  </div>
+                  </button>
                 </Tab.Panel>
                 <Tab.Panel
                   key={"phone"}
@@ -90,16 +105,13 @@ const SignIn = () => {
                     "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none "
                   )}
                 >
-                  <div className="mt-5">
+                  <div className="">
                     <PhoneInput
                       country={"us"}
                       value={phone}
-                      placeholder=""
-                      specialLabel=""
                       onChange={onPhone}
                     />
                   </div>
-
                   <div className="flex items-center justify-center  rounded-lg border pt-3 pb-3 mt-5 border-black cursor-pointer  hover:bg-black hover:text-gray-100">
                     <span>Continue</span>
                   </div>
