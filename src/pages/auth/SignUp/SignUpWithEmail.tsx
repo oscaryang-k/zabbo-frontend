@@ -32,6 +32,7 @@ const SignUpWithEmail = () => {
               <BaseInput
                 name="email"
                 value={email}
+                autoFocus={true}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
@@ -42,7 +43,7 @@ const SignUpWithEmail = () => {
               type="button"
               className={`flex justify-center w-[320px]  items-center ${
                 email ? "bg-black" : ""
-              } rounded-lg pt-2 pb-2 mt-8 text-white cursor-pointer disabled:text-[#FFFFFF] disabled:bg-[#CCCCCC]`}
+              } rounded-lg pt-3 pb-3 mt-8 text-white cursor-pointer disabled:text-[#FFFFFF] disabled:bg-[#CCCCCC]`}
               disabled={checkEmailType(email) ? false : true}
               onClick={() => {
                 navigate("/signup/email-verify");

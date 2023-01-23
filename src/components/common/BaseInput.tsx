@@ -3,6 +3,7 @@ interface propsType {
   endLabel: any;
   name: string;
   type: string;
+  autoFocus: boolean;
 
   onChange: (e: any) => void;
   placeholder: string;
@@ -13,10 +14,16 @@ const BaseInput = (props: propsType) => {
     <>
       <div className="flex flex-col">
         <div className="flex justify-between">
-          <span className="text-xs mb-1" style={{ color: "#606060" }}>
+          <span
+            className={`text-xs ${props.label}?mb-1:null`}
+            style={{ color: "#606060" }}
+          >
             {props.label}
           </span>
-          <span className="text-xs mb-1" style={{ color: "#606060" }}>
+          <span
+            className={`text-xs ${props.label}?mb-1:null`}
+            style={{ color: "#606060" }}
+          >
             {props.endLabel}
           </span>
         </div>
@@ -24,6 +31,7 @@ const BaseInput = (props: propsType) => {
           type={props.type}
           value={props.value}
           name={props.name}
+          autoFocus={props.autoFocus}
           onChange={props.onChange}
           className="border rounded-lg text-base p-3 w-full"
           style={{ backgroundColor: "#FBFBFB" }}
@@ -40,6 +48,7 @@ BaseInput.defaultProps = {
   placeholder: "",
   value: null,
   endLabel: "",
+  autoFocus: false,
 };
 
 export default BaseInput;

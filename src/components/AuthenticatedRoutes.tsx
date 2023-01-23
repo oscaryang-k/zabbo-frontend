@@ -2,20 +2,25 @@ import { Routes, Route } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
 
+import PageMainWallet from "../pages/wallet/wallet";
+import PageChooseWallet from "../pages/wallet/chooseWallet";
 import PageSignIn from "../pages/auth/SignIn/SignIn";
 import PageSignUp from "../pages/auth/SignUp/SignUp";
 import PageWelcome from "../pages/welcome/Welcome";
 import PageSettings from "../pages/Settings/PageSettings";
 import PageContacts from "../pages/Contacts/PageContacts";
 import PageCheckName from "../pages/auth/SignUp/CheckName";
-import PageVerifyByEmail from "../pages/auth/SignIn/VerifyByEmail";
 import PageInfoContact from "../pages/Contacts/InfoContact";
 import PageContracts from "../pages/Contracts/PageContracts";
 import PageDashboard from "../pages/Dashboard/PageDashboard";
 import PageLinks from "../pages/Dashboard/subDashboard/Links";
 import PageReport from "../pages/Dashboard/subDashboard/Report";
+import PageSelectOptions from "../pages/auth/SignUp/SelectOption";
 import PageProfile from "../pages/Dashboard/subDashboard/Profile";
 import PageSecurity from "../pages/Settings/SubSettings/Security";
+import PageCheckFullName from "../pages/auth/SignUp/CheckFullName";
+import PageVerifyByEmail from "../pages/auth/SignIn/VerifyByEmail";
+import PageSignUpEndWelcome from "../pages/auth/SignUp/SignUpEndWelCome";
 import PageSignUpWithEmail from "../pages/auth/SignUp/SignUpWithEmail";
 import Transactions from "../pages/Dashboard/subDashboard/Transactions";
 import PageContactHistory from "../pages/Contracts/subContracts/history";
@@ -29,6 +34,7 @@ import PageTermsAndConditions from "../pages/Settings/SubSettings/TermsAndCondit
 function AuthenticatedRoutes() {
   return (
     <Routes>
+      <Route path="/" index element={<PageWelcome />} />
       <Route path="/" element={<MainLayout />}>
         <Route path="/dashboard" index element={<PageDashboard />} />
         <Route
@@ -96,12 +102,28 @@ function AuthenticatedRoutes() {
         index
         element={<PageCheckEmailVerifyCode />}
       />
+      <Route path="/signup/check-name" index element={<PageCheckName />} />
       <Route
-        path="/signup/check-name"
+        path="/signup/select-options"
         index
-        element={<PageCheckName />}
-      ></Route>
-      <Route path="/" index element={<PageWelcome />} />
+        element={<PageSelectOptions />}
+      />
+      <Route
+        path="/signup/check-fullname"
+        index
+        element={<PageCheckFullName />}
+      />
+      <Route
+        path="/signup/end-welcome"
+        index
+        element={<PageSignUpEndWelcome />}
+      />
+      <Route path="/wallet" element={<PageMainWallet />} />
+      <Route
+        path="/wallet/connect/choose-wallet"
+        index
+        element={<PageChooseWallet />}
+      />
     </Routes>
   );
 }

@@ -31,7 +31,6 @@ const Welcome = () => {
           <span>
             Already have an account?
             <NavLink style={{ color: "#82AA47" }} to={"/signin"}>
-              {" "}
               Sign In
             </NavLink>
           </span>
